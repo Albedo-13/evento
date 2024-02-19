@@ -12,7 +12,9 @@ export const metadata: Metadata = {
   description: "Browse more than 10,000 events worldwide",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+type TProps = { children: React.ReactNode };
+
+export default function RootLayout({ children }: TProps) {
   return (
     <html lang="en">
       <body className={`${inter.className} bg-gray-950 text-white overflow-y-scroll`}>
