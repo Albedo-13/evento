@@ -1,5 +1,5 @@
 import Link from "next/link";
-import clsx from "clsx";
+import SearchForm from "@/components/search-form";
 
 export default function Home() {
   return (
@@ -9,21 +9,17 @@ export default function Home() {
         Browse more than <span className="font-bold italic underline text-accent">10,000 events</span> around you
       </p>
 
-      <form action="" className="w-full sm:w-[580px]">
-        <input
-          placeholder="Search events in any city..."
-          type="text"
-          spellCheck={false}
-          className="w-full h-16 rounded-lg bg-white/[7%] px-6 outline-none transition 
-          focus:ring-accent/50 focus:ring-2"
-        />
-      </form>
+      <SearchForm />
 
       <section className="mt-4 flex gap-x-4 text-sm text-white/50">
         <p>Popular: </p>
         <div className="space-x-2 font-semibold">
-          <Link href="/events/austin" className={"hover:text-white/75 transition"}>Austin</Link>
-          <Link href="/events/seattle" className={"hover:text-white/75 transition"}>Seattle</Link>
+          <Link href="/events/austin" className={"hover:text-white/75 transition"}>
+            Austin
+          </Link>
+          <Link href="/events/seattle" className={"hover:text-white/75 transition"}>
+            Seattle
+          </Link>
         </div>
       </section>
     </main>
