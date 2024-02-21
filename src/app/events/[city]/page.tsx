@@ -1,4 +1,5 @@
 import H1 from "@/components/h1";
+import { TEvent } from "@/lib/types";
 
 type TProps = {
   params: {
@@ -10,7 +11,7 @@ export default async function EventsPage({ params }: TProps) {
   const city = params.city;
 
   const response = await fetch(`https://bytegrad.com/course-assets/projects/evento/api/events?city=${city}`);
-  const events = await response.json();
+  const events: TEvent[] = await response.json();
   console.log(events);
 
   return (
