@@ -18,7 +18,9 @@ export default async function EventsPage({ params }: TProps) {
 
   return (
     <main className="flex flex-col items-center px-5 py-24 min-h-[110vh]">
-      <H1 className="mb-28">{city === "all" ? "All Events" : `Events in ${city.charAt(0).toUpperCase() + city.slice(1)}`}</H1>
+      <H1 className="mb-28">
+        {city === "all" ? "All Events" : `Events in ${city.charAt(0).toUpperCase() + city.slice(1)}`}
+      </H1>
       <EventsList events={events} />
     </main>
   );
